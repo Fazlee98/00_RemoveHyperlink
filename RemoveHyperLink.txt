@@ -1,0 +1,12 @@
+Sub RemoveHyperlinks()
+    Dim ws As Worksheet
+    Dim hyperlink As Hyperlink
+    
+    ' Set the worksheet (use ActiveSheet to target the active sheet)
+    Set ws = ThisWorkbook.ActiveSheet
+    
+    ' Loop through each hyperlink in the worksheet and delete it
+    For Each hyperlink In ws.Hyperlinks
+        hyperlink.Delete
+    Next hyperlink
+End Sub
